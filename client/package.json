@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "bestofhumor",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "KimJeongmin <rafale_fly@hotmail.com>",
+  "author": "DavKim <rafale_fly@hotmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,11 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "material-design-icons-iconfont": "^3.0.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue2-editor": "^2.4.2",
-    "vuetify": "^1.0.4",
-    "vuex": "^3.0.1"
+    "vuetify": "^1.0.18"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
