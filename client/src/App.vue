@@ -11,6 +11,15 @@ export default {
   name: 'App',
   components: {
     Toolbar
+  },
+  mounted () {
+    this.$store.dispatch('requestBestItems')
+      .then(() => {
+        console.log('Success requestBestItems!!')
+      })
+      .catch(err => {
+        console.log('Error requestBestItems!!', err)
+      })
   }
 }
 </script>

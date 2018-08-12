@@ -6,14 +6,20 @@
   "scripts": {
     "build": "node_modules/.bin/grunt build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mongo": "./bin/darwin/x64/mongo/mongod --dbpath data"
+    "mongo": "./bin/darwin/x64/mongo/mongod --dbpath data",
+    "scrapper": "node ./worker/scrapper",
+    "server": "node ./server.js",
+    "start": "npm run mongo & npm run scrapper & npm run server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "mongoose": "^5.0.3"
+    "mongoose": "^5.0.3",
+    "winston": "^3.0.0",
+    "winston-daily-rotate-file": "^3.3.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

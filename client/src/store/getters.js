@@ -1,4 +1,4 @@
 const getters = {
 }
 
-module.exports = getters
+export default getters

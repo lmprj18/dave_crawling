@@ -2,10 +2,9 @@
 
 const express = require('express');
 const router = express.Router();
+const humor = require('../controlls/humor');
 
 /* GET api listing. */
-router.get('/', (req, res) => {
-  res.send('api works');
-});
+router.get('/humor', humor.getHumor);
 
 module.exports = router;
