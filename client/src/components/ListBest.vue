@@ -11,7 +11,7 @@
               :href="item.href"
             >
               <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title><b>{{ item.title }}</b></v-list-tile-title>
                 <!-- <v-list-tile-sub-title class="text--primary">{{ item.headline }}</v-list-tile-sub-title> -->
                 <v-list-tile-sub-title>{{ item.href }}</v-list-tile-sub-title>
               </v-list-tile-content>
