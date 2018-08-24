@@ -47,6 +47,7 @@ function scrap () {
         return store.saveBlogList(list);
       })
       .then(() => {
+        list = [];
         resolve('success');
       })
       .catch((err) => {

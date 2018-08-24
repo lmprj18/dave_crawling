@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var blogSchema = new Schema({
-  key: String,
+  key: { 
+    type: String,
+    unique: true
+  },
   title: String,
   comment: String,
   good: Number,
