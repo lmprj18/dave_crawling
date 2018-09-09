@@ -10,8 +10,12 @@ function saveBlogList (list) {
   return new Promise((resolve, reject) => {
     const bulk = BlogModel.collection.initializeUnorderedBulkOp();
     list.forEach((v) => {
-      bulk.find({key: v.key}).upsert().updateOne(v)
+      bulk.find({key: v.key}).upsert().updateOne({
+        $set: v,
+        $setOnInsert: {create_t: new Date()}
+      })
     })
+
     if (list.length === 0) {
       return resolve();
     }
@@ -26,14 +30,14 @@ function saveBlogList (list) {
   })
 }
 
-function loadBlogList (list) {
-  return new Promise(function(resolve, reject) {
-    fs.readFile(config.blogDataFilePath, function(err, context) {
-      if (err) return reject(err);
-      resolve(context);
-    })
-  })
-}
+// function loadBlogList (list) {
+//   return new Promise(function(resolve, reject) {
+//     fs.readFile(config.blogDataFilePath, function(err, context) {
+//       if (err) return reject(err);
+//       resolve(context);
+//     })
+//   })
+// }
 
 exports.saveBlogList = saveBlogList;
-exports.loadBlogList = loadBlogList;
+// exports.loadBlogList = loadBlogList;

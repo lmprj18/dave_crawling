@@ -13,8 +13,9 @@ var blogSchema = new Schema({
   bad: Number,
   views: Number,
   href: String,
-  date: {
-    type: Date
+  create_t: {
+    type: Date,
+    index: true
   },
   symbol: String
 });

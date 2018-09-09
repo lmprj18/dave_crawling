@@ -1,3 +1,4 @@
+'use strict'
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -12,8 +13,9 @@ var blogSchema = new Schema({
   bad: Number,
   views: Number,
   href: String,
-  date: {
-    type: Date
+  create_t: {
+    type: Date,
+    index: true
   },
   symbol: String
 });
